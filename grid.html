@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>grid 실습</title>
+  <style>
+    a:link {text-decoration: none; color :black;}
+    a:visited {text-decoration: none; color :black;}
+    a:active {text-decoration: none; color :black;}
+    a:hover {text-decoration: none; color :black;}
+    .container {
+        display: grid;
+        grid-template-rows: 2em 200px 480px 100px;
+        grid-template-columns: repeat(2, 480px);
+        grid-template-areas:
+            "navigation navigation"
+            "img_container img_container"
+            "wrap wrap"
+            "footer footer";
+        margin: 0 15%;
+        row-gap: 10px;
+    }
+    .navigation {
+        height: 100%;
+        padding: 8px;
+        font-weight: bold;
+        grid-column: 1 / span 2;
+        border: solid;
+    }
+    .img_container {
+            text-align: center;
+            grid-column: span 2;
+            position: relative;
+            width: 100%;
+            height: 200px;
+            background-image: URL("./1366x768.jpg");
+            background-position: center;
+            background-size: cover;
+    }
+    .img_font {
+        color: white;
+    }
+    .wrap {
+        display:grid;
+        grid-column: span 2;
+        grid-template: 300px 200px / 700px 240px;
+        grid-template-areas: 
+            "section aside"
+            "foot foot";
+    }
+    section {
+        width: 600px;
+        grid-area: section;   
+    }
+    aside {
+
+        grid-area: aside;
+    }
+    foot {
+        display: flex;
+        grid-column: span 2;
+    }
+    foot > img {
+        width: 150px;
+        height: 150px;
+        margin: 20px 40px;
+    }
+    footer {
+        grid-column: span 2;
+        box-sizing: border-box;
+        width: 100%;
+        padding: 30px;
+        color:white;
+        font-size: 2em;
+        text-justify:distribute;
+        text-align: center;
+        background-color: gray;
+    }
+  </style>
+</head>
+<body>
+    <div class="container">
+        <div class="navigation">
+            <a href="./index.html">MAIN</a>
+            <a href="./grid.html">GRID</a>
+            <a href="./flex.html">FLEX</a>
+        </div>
+        <div class="img_container">
+            <div class="img_font">
+                <h1 class="text_item">My Home Page</h1>
+                <p class="text_item">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            </div>
+        </div>
+        <div class="wrap">
+            <section>
+                <h2>Section 1</h2>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sunt illo debitis doloribus corrupti impedit reiciendis molestiae, harum omnis reprehenderit, doloremque hic error dignissimos magni quo inventore sint ex suscipit animi quae modi possimus, laborum est. Voluptates dolor, dolorem tempora voluptas ipsa et similique tenetur vitae temporibus possimus in quos architecto ut maiores ipsam dicta deleniti, quae hic commodi sunt sequi itaque neque pariatur asperiores? Delectus magnam accusamus, quos explicabo aspernatur totam nemo doloremque vitae dolor ratione, dolorem consequatur. Alias inventore consequuntur est accusamus quasi similique voluptate, iusto, eligendi ullam blanditiis assumenda placeat facilis corporis mollitia? Commodi, explicabo! Omnis, non voluptas.</p>
+            </section>
+            <aside>
+                <h2>Aside</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae adipisci eveniet obcaecati odio placeat nihil, minus doloribus deleniti quisquam alias iste mollitia sed aperiam voluptate omnis. Repudiandae alias accusantium ipsum eos rerum, dolorem ea reiciendis ab saepe animi ad harum!</p>
+            </aside>
+            <foot>
+                <img src="./cat.jpg" alt="cat">
+                <div style="width: 700px;">
+                    <h2>Section 2</h2>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dicta eaque, est nisi aut velit saepe ea? Eius illo numquam obcaecati sunt temporibus, quae, error cum eligendi ipsa, velit tenetur voluptatum iusto ad illum aspernatur. Pariatur laudantium expedita est quidem vero.</p>
+                </div>
+            </foot>
+        </div>
+        <footer>
+            Copyright ⓒ
+        </footer>
+    </div>
+</body>
+</html>
