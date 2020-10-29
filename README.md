@@ -13,10 +13,10 @@
 |이름|설명|
 |---|---|
 |transition|단축 속성 지정|
-|---|---|
 |transition-duration|이벤트 처리가 재생되는 시간 지정|
 |transition-property|변형할 속성을 지정|
 |transition-timing-function|수치 변형 함수를 지정|
+
 이 속성은 위치, 크기, 박스, 테두리, 색상, 투명도, 변환(transform)에 적용될 수 있습니다.
 
 ---
