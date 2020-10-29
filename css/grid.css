@@ -1,0 +1,52 @@
+* {
+    font-family: 'Calibri', serif;/*웹 폰트 지정*/
+}
+.container {
+    position: relative;
+    width: 960px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+div.navigation {
+    font-size: 1.2em;
+    font-weight: bold;
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    top: 0; left: 0;
+    border-style: solid;
+    box-sizing: border-box;
+}
+a:link {text-decoration: none; color :black;}
+a:visited {text-decoration: none; color :black;}
+a:active {text-decoration: none; color :black;}
+a:hover {text-decoration: none; color :black;}
+
+.wrapper {
+    margin: 80px;
+    animation-name: banner-contnet;
+    display:grid;
+    grid-template: repeat(2, 200px) / repeat(4, 200px);
+    transform: rotateX(3deg) rotateY(5deg) rotateZ(1deg);
+    transform-style: preserve-3d;
+}
+
+.wrapper > img {
+    transition-duration: 500ms;
+    opacity: 0.5;
+    z-index: 0;
+}
+
+.wrapper > img:hover {
+    transform: scale(1.1);
+    opacity: 1;
+    z-index: 1;
+}
+
+img.cat2 { grid-column: span 2; } 
+img.cat4 { grid-column: span 2;}
+
+@keyframes banner-content {
+    from { left: -50%; }
+    to { left: 50px; }
+}
