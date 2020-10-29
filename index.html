@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>default display page</title>
+    <style>
+        * {
+            font-family: 'Calibri', serif;/*웹 폰트 지정*/
+        }
+        .text_item {
+            padding: 20px;
+        }
+        .container {
+            position: relative;
+            width: 960px;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+        div.navigation {
+            font-size: 1.2em;
+            font-weight: bold;
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            top: 0; left: 0;
+            border-style: solid;
+            box-sizing: border-box;
+        }
+        .img_container {
+            position: relative;
+            width: 100%;
+            height: 200px;
+            background-image: URL("./1366x768.jpg");
+            background-position: center;
+            background-size: cover;
+        }
+        .img_font {
+            color: white;
+        }
+        a:link {text-decoration: none; color :black;}
+        a:visited {text-decoration: none; color :black;}
+        a:active {text-decoration: none; color :black;}
+        a:hover {text-decoration: none; color :black;}
+        section {
+            width: 600px;
+            margin-right: 120px;
+            float: left;
+        }
+        aside {
+            width: 200px;
+            float: left;
+        }
+        section.foot {
+            width:900px;
+        }
+        section.foot > img {
+            width: 150px;
+            height: 150px;
+            margin: 20px 40px;
+            float: left;
+        }
+        footer {
+            padding: 30px;
+            color:white;
+            font-size: 2em;
+            text-justify:distribute;
+            text-align: center;
+            background-color: gray;
+        }
+        .wrap { overflow: hidden; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="navigation">
+            <a href="./index.html">MAIN</a>
+        </div>
+        <div class="img_container">
+            <div class="img_font">
+                <h1 class="text_item">My Home Page</h1>
+                <p class="text_item">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            </div>
+        </div>
+        <div class="wrap">
+            <section>
+                <h2>Section 1</h2>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sunt illo debitis doloribus corrupti impedit reiciendis molestiae, harum omnis reprehenderit, doloremque hic error dignissimos magni quo inventore sint ex suscipit animi quae modi possimus, laborum est. Voluptates dolor, dolorem tempora voluptas ipsa et similique tenetur vitae temporibus possimus in quos architecto ut maiores ipsam dicta deleniti, quae hic commodi sunt sequi itaque neque pariatur asperiores? Delectus magnam accusamus, quos explicabo aspernatur totam nemo doloremque vitae dolor ratione, dolorem consequatur. Alias inventore consequuntur est accusamus quasi similique voluptate, iusto, eligendi ullam blanditiis assumenda placeat facilis corporis mollitia? Commodi, explicabo! Omnis, non voluptas.</p>
+            </section>
+            <aside>
+                <h2>Aside</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae adipisci eveniet obcaecati odio placeat nihil, minus doloribus deleniti quisquam alias iste mollitia sed aperiam voluptate omnis. Repudiandae alias accusantium ipsum eos rerum, dolorem ea reiciendis ab saepe animi ad harum!</p>
+            </aside>
+            <section class="foot">
+                <img src="./cat.jpg" alt="cat">
+                <h2>Section 2</h2>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dicta eaque, est nisi aut velit saepe ea? Eius illo numquam obcaecati sunt temporibus, quae, error cum eligendi ipsa, velit tenetur voluptatum iusto ad illum aspernatur. Pariatur laudantium expedita est quidem vero.</p>
+            </section>
+        </div>
+        <footer>
+            Copyright ⓒ
+        </footer>
+    </div>
+</body>
+</html>
