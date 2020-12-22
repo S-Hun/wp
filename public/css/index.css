@@ -1,0 +1,12 @@
+main {
+    margin: 100px;
+}
+
+main > * {
+    text-align: center;
+}
+
+main > p {
+    margin: auto;
+    width: 50%;
+}
