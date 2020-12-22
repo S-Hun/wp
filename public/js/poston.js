@@ -16,4 +16,3 @@ form.onsubmit = () => {
     }
     return Check;
 };
-  

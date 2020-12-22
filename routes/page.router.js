@@ -11,27 +11,13 @@ router.get('/', (req, res, next) => {
         console.log(err);
         return
     }
-
-    if(data.length == 0) {
-        console.log("No record found")
-        return
-    }
+    
     res.render('index', {
       title: 'Code Slit',
       cookie: JSON.stringify(req.cookies),
       posts: data,
     });
   });
-  
-
-  /*
-  console.log(Post.find({}));
-  res.render('index', {
-    title: 'Code Slit',
-    cookie: JSON.stringify(req.cookies),
-    posts: Post.find({}),
-  });
-  */
 });
 
 router.get('/join', (req, res, next) => {
@@ -51,6 +37,12 @@ router.get('/login', (req, res, next) => {
 router.get('/post', requireAuthentication, (req, res, next) => {
   res.render('post-form', {
     title: 'Code Slit'
+  });
+});
+
+router.get('/read', requireAuthentication, (req, res, next) => {
+  res.render('read', {
+    title: 'Code Slit - 게시글'
   });
 });
 
