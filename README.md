@@ -6,6 +6,8 @@
 > Github 링크 : [LINK](https://github.com/S-Hun/wp-endTerm) <br>
 > Web 링크 : [LINK](https://protected-ridge-26017.herokuapp.com/) <br>
 
+현재 Web 링크 접속화면이 기본 화면으로 떠서 제 개인주소로 열었습니다. 제출한 링크 확인부탁드립니다.. 죄송합니다.
+
 ## 설계
 ![design](./img/design.jpg)
 <strong>1. 기능</strong>
@@ -82,10 +84,13 @@ CSS를 활용하여 각 버튼에 active 형태가 나타나도록 구현하였�
 CSS를 통해 맞춘 기본색은 [LINK](https://colorhunt.co/palette/2763)에 맞추어 디자인하였으며, 좀 둥글둥글하고 고전적인 디자인을 원하여 디자인하였습니다. 그리고 좀 더 액티브한 웹 환경을 구성하기 위해서 마우스나 버튼에 따른 반응을 다양하게 나타낼 수 있도록 :hover :active 등의 기능을 백분 활용하였습니다. 마찬가지로 transition 기능을 여기저기에 추가해보았는데, 너무 무분별하게 추가하니 오히려 난잡해보여서 아주 작은 부분에만 사용하였습니다. 페이지가 확장되면 필요한 곳에만 선택적으로 활용하면 좋을 것 같습니다.
 
 ## JAVASCRIPT
-게시판 기능과 페이징 기능
+
+댓글은 구현하지 못하고 게시글 부분만 구현하게 되었습니다. 먼저 post.router에서 post-form으로 Post.find({}) 정보를 넘겨주도록 하였으며, 이 결과를 로그인 하였을 때 글을 쓰게 되면 Post.create를 통해 DB에 생성한 글의 정보가 업로드 되고 이를 통해 DB의 posts collection에 데이터가 앃입니다. 이를 javascript를 활용하여 posts의 크기를 가져와 그 크기만큼 li 태그를 생성하게 하였으며, 각각 li 태그에 a 속성을 부여하여 각 페이지를 누르면 해당 글을 읽을 수 있는 페이지로 이동되어 해당 글의 작성자, 즉 현재 로그인 계정 user.username과 작성된 posts\[\].username이 같으면 지울 수 있는 버튼을 띄우도록 하여 해당 버튼을 통해 개인 계정을 관리할 수 있습니다.
+
+댓글의 경우 schema를 추가하여 댓글 schema를 Post의 요소 중 하나로 추가하고 그 타입을 댓글로 지정하는 것으로 만들 수 있습니다. 마찬가지로 글을 읽는 페이지에서 나타나며 직접 댓글을 작성한 유저의 경우 해당 댓글을 지울 수 있도록 구현하고자 하였습니다. 
 
 ## NODEJS
-기본적으로 수업에서 활용한 npm을 이용하여 nodejs를 활용하였습니다. express, morgan, cookie-parser, expression-session, nunjucks, mongoose <<<<추가>>>> 등을 설치하였고, res, req를 활용하여 페이지를 구현하였습니다. 기본적으로 "인증 처리" 파트의 부분을 분석하여 프로그램을 제작하였기에 express generator는 사용하지 않았지만, 마찬가지로 설치하였고 정말 편리하다는 것을 느꼈습니다. 템플릿을 활용하기 위한 nunjucks 그리고 서버 접속시 응답을 위한 morgan, 쿠키 증명을 위한 cookie-parser, 웹 유지를 위한 express 및 expression-session도 적절히 분석 및 활용하였습니다.
+기본적으로 수업에서 활용한 npm을 이용하여 nodejs를 활용하였습니다. express, morgan, cookie-parser, expression-session, nunjucks, mongoose 등을 설치하였고, res, req를 활용하여 페이지를 구현하였습니다. 기본적으로 "인증 처리" 파트의 부분을 분석하여 프로그램을 제작하였기에 express generator는 사용하지 않았지만, 마찬가지로 설치하였고 정말 편리하다는 것을 느꼈습니다. 템플릿을 활용하기 위한 nunjucks 그리고 서버 접속시 응답을 위한 morgan, 쿠키 증명을 위한 cookie-parser, 웹 유지를 위한 express 및 expression-session도 적절히 분석 및 활용하였습니다.
 
 ## DB
 ![DB](./img/DB_result.jpg)
