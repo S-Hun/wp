@@ -1,0 +1,47 @@
+html, body {
+    height: 100%;
+}
+
+main {
+    margin: 0;
+    height: 100%;
+    overflow: hidden;
+}
+
+.vblock {
+    overflow: hidden;
+    text-align: center;
+    margin-top: 5px;
+    margin-right: 0.5%;
+    float: left;
+    background-color: #252a34;
+    align-content: center;
+}
+
+.vblock > * {
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+.state {
+    width: 20%;
+    height: 50%;
+}
+
+.plist {
+    width: 26%;
+    height: 100%;
+}
+
+.circle_pic {
+    border-radius: 50%;
+    margin: 10px auto;
+    padding: 0 0;
+    width: 10em;
+    height: 10em;
+    background-color: white;
+}
+
+a {
+    text-decoration: none;
+}

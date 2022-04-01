@@ -1,0 +1,44 @@
+{% extends 'layout.html' %}
+
+{% block styles %}
+{%if isAuthenticated %}
+<link rel='stylesheet' href="/public/css/auth_index.css">
+{% else %}
+<link rel='stylesheet' href="/public/css/index.css">
+{% endif %}
+{% endblock %}
+
+{% block content %}
+{%if isAuthenticated %}
+<div class="vblock state">
+    <div class="circle_pic"></div>
+    <div><h2>{{user.username}}</h2></div>
+    <ul>
+        <li><a href="/post">글쓰기</a></li>
+        <li><a href="">작성글 관리</a></li>
+        <li><a href="">내정보 관리</a></li>
+    </ul>
+</div>
+<div class="vblock plist">
+ <div><h2>내 글 목록</h2></div>
+</div>
+<div class="vblock plist">
+ <div><h2>베스트 글</h2></div>
+ 게시글 수 : {{ posts.length }}
+ <ul id="postlist">
+     {% for post in posts %}
+     <li><a href="/read:id">{{ post.subject }}</a></li>
+     {% endfor %}
+ </ul>
+</div>
+<div class="vblock plist">
+ <div><h2>베스트 유저</h2></div>
+</div>
+{% else %}
+<h1>Code Slit에 방문하신 것을 환영합니다!</h1>
+<p>코드 슬릿은 코드를 하이라이팅하고 리뷰하는 새로운 뷰입니다.</p><br>
+<div style="border-radius: 5px; margin: 0 auto; width: 100px; background-color: black;"><a href="https://github.com/" style="padding: 10px;">GITHUB</a></div>
+<br>
+<div>Cookie: {{cookie}}</div>
+{% endif %}
+{% endblock %}
