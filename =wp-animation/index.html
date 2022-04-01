@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>default display page</title>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+    <div class="container">
+        <!-- <div class="navigation">
+            <a href="./index.html">MAIN</a>
+            <a href="./grid.html">GRIDVIEW</a>
+            <a href="./test.html">3DVIEW</a>
+        </div> -->
+        <header>
+            <button id="menu-button">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </button>
+            <h5>My Home Page</h5>
+        </header>
+        <nav id="side-menu" class="hidden">
+            <ul>
+              <li><a href="./index.html">MAIN</a></li>
+              <li><a href="./grid.html">GRIDVIEW</a></li>
+              <li><a href="./test.html">3DVIEW</a></li>
+            </ul>
+        </nav>        
+        <div class="img_container">
+            <div class="img_font">
+                <h1 class="text_item">My Home Page</h1>
+                <p class="text_item">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            </div>
+        </div>
+        <div class="wrap">
+            <section>
+                <h2>Section 1</h2>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sunt illo debitis doloribus corrupti impedit reiciendis molestiae, harum omnis reprehenderit, doloremque hic error dignissimos magni quo inventore sint ex suscipit animi quae modi possimus, laborum est. Voluptates dolor, dolorem tempora voluptas ipsa et similique tenetur vitae temporibus possimus in quos architecto ut maiores ipsam dicta deleniti, quae hic commodi sunt sequi itaque neque pariatur asperiores? Delectus magnam accusamus, quos explicabo aspernatur totam nemo doloremque vitae dolor ratione, dolorem consequatur. Alias inventore consequuntur est accusamus quasi similique voluptate, iusto, eligendi ullam blanditiis assumenda placeat facilis corporis mollitia? Commodi, explicabo! Omnis, non voluptas.</p>
+            </section>
+            <aside>
+                <h2>Aside</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae adipisci eveniet obcaecati odio placeat nihil, minus doloribus deleniti quisquam alias iste mollitia sed aperiam voluptate omnis. Repudiandae alias accusantium ipsum eos rerum, dolorem ea reiciendis ab saepe animi ad harum!</p>
+            </aside>
+            <section class="foot">
+                <img src="./img/cat.jpg" alt="cat">
+                <h2>Section 2</h2>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dicta eaque, est nisi aut velit saepe ea? Eius illo numquam obcaecati sunt temporibus, quae, error cum eligendi ipsa, velit tenetur voluptatum iusto ad illum aspernatur. Pariatur laudantium expedita est quidem vero.</p>
+            </section>
+        </div>
+        <footer>
+            Copyright ⓒ
+        </footer>
+    </div>
+    <script>
+        // javascript 코드(다음 주 강의부터 다루게 됨)
+        let hidden = true;
+        const menuButton = document.getElementById('menu-button');
+        const sideMenu = document.getElementById('side-menu');
+    
+        menuButton.addEventListener('click', () => {
+          if (hidden) {
+            sideMenu.classList.remove('hidden');
+            hidden = false;
+          } else {
+            sideMenu.classList.add('hidden');
+            hidden = false;
+          }
+        });
+      </script>
+</body>
+</html>
