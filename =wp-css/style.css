@@ -1,0 +1,64 @@
+h6 {
+    color: red;
+}
+
+#test {
+    color:#9999FF;
+}
+
+.test {
+    color:#555500;
+}
+
+.apply-1 {
+    color: black;
+}
+
+.apply-2 {
+    color: gray;   
+}
+
+.apply-4 {
+    color: gray;
+}
+
+.apply-3 {
+    color: black;
+}
+
+[type=text] {
+    color: blue;
+}
+
+.section1 p {
+    color: red;
+}
+
+.section2 > p {
+    color: blue;
+}
+
+h4 + h5 { 
+    color: red; 
+}
+
+h4 ~ h5 { 
+    border: 1px solid blue; 
+}
+
+h3:hover { 
+    color: red; 
+}
+
+h3:active { 
+    color: blue; 
+}
+
+[type=text]:enabled { background-color: orange; color: white; }
+[type=text]:disabled { background-color: grey; }
+[type=text]:focus { background-color: black; }
+[type=checkbox] + div {
+    overflow: hidden;
+    height: 100px;
+    border: 1px solid black; }
+[type=checkbox]:checked + div { height: 0px; }
